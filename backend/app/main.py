@@ -1,8 +1,10 @@
 from fastapi import FastAPI, UploadFile, File, HTTPException
 from fastapi.middleware.cors import CORSMiddleware
 from pathlib import Path
+import os
 from fastapi import HTTPException
 import shutil
+from app.storage import DATA_DIR
 
 from pydantic import BaseModel
 from datetime import datetime
@@ -62,11 +64,18 @@ app = FastAPI(
     version="1.0.0",
 )
 
+frontend_origins = [
+    origin.strip()
+    for origin in os.getenv("FRONTEND_URL", "").split(",")
+    if origin.strip()
+]
+
 app.add_middleware(
     CORSMiddleware,
     allow_origins=[
         "http://localhost:5173",
-        "http://127.0.0.1:5173"
+        "http://127.0.0.1:5173",
+        *frontend_origins,
     ],
     allow_credentials=True,
     allow_methods=["*"],
@@ -76,7 +85,7 @@ app.add_middleware(
 initialize_database()
 initialize_feedback_table()
 
-UPLOAD_DIR = Path("app/uploads")
+UPLOAD_DIR = DATA_DIR / "uploads"
 
 UPLOAD_DIR.mkdir(
     parents=True,

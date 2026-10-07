@@ -2,7 +2,10 @@ import sqlite3
 from pathlib import Path
 
 
-DB_PATH = Path("app/metadata.db")
+from app.storage import DATA_DIR
+
+
+DB_PATH = DATA_DIR / "metadata.db"
 
 
 def get_connection():

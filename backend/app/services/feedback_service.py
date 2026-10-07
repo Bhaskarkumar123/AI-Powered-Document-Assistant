@@ -1,9 +1,10 @@
 import sqlite3
 from pathlib import Path
 from datetime import datetime
+from app.storage import DATA_DIR
 
 
-DB_PATH = Path("app/metadata.db")
+DB_PATH = DATA_DIR / "metadata.db"
 
 
 def initialize_feedback_table():

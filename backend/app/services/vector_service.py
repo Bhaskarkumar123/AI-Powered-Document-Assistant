@@ -1,10 +1,11 @@
 import chromadb
 from sentence_transformers import SentenceTransformer
+from app.storage import DATA_DIR
 
 
 # ChromaDB persistent database
 chroma_client = chromadb.PersistentClient(
-    path="app/chroma_db"
+    path=str(DATA_DIR / "chroma_db")
 )
 
 # Collection

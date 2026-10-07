@@ -14,11 +14,13 @@ import {
 } from "lucide-react";
 
 import React, { useState, useEffect } from "react";
+import { useNavigate } from "react-router-dom";
+import { API_BASE_URL } from "../services/api";
 
 function Sidebar() {
   const [showHelp, setShowHelp] = useState(false);
   const [showSettings, setShowSettings] = useState(false);
-  
+  const navigate = useNavigate();
   
   const [settingsPage, setSettingsPage] = useState("main");
   const [language, setLanguage] = useState("English");
@@ -48,7 +50,7 @@ function Sidebar() {
       setDocumentError("");
 
       const response = await fetch(
-        "http://127.0.0.1:8000/documents"
+        `${API_BASE_URL}/documents`
       );
 
       if (!response.ok) {
@@ -78,7 +80,7 @@ function Sidebar() {
       setConversationError("");
 
       const response = await fetch(
-          "http://127.0.0.1:8000/conversations?role=user"
+          `${API_BASE_URL}/conversations?role=user`
         );
 
       if (!response.ok) {
@@ -102,7 +104,7 @@ function Sidebar() {
     const deleteConversation = async (sessionId) => {
       try {
         const response = await fetch(
-          `http://127.0.0.1:8000/conversation/${sessionId}?role=user`,
+          `${API_BASE_URL}/conversation/${sessionId}?role=user`,
           {
             method: "DELETE",
           }
@@ -139,7 +141,7 @@ function Sidebar() {
         }
 
         const response = await fetch(
-          `http://127.0.0.1:8000/documents/${documentId}?role=user`,
+          `${API_BASE_URL}/documents/${documentId}?role=user`,
           {
             method: "DELETE",
           }
@@ -261,7 +263,11 @@ function Sidebar() {
             <span>Help & Support</span>
         </button>
 
-        <button className="sidebar-item">
+        <button
+          type="button"
+          className="sidebar-item"
+          onClick={() => navigate("/logout")}
+          >
           <LogOut size={20} />
           <span>Logout</span>
         </button>
@@ -839,7 +845,7 @@ function Sidebar() {
                     setFeedbackMessage("");
 
                     const response = await fetch(
-                      "http://127.0.0.1:8000/feedback",
+                      `${API_BASE_URL}/feedback`,
                       {
                         method: "POST",
 

@@ -1,4 +1,6 @@
 import { BrowserRouter, Routes, Route } from "react-router-dom";
+import LogoutPage from "./pages/LogoutPage";
+import Login from "./pages/Login";
 
 import ChatAssistant from "./pages/ChatAssistant";
 import AdminDashboard from "./pages/AdminDashboard";
@@ -22,6 +24,8 @@ function App() {
           element={<AdminDashboard />}
         />
 
+        <Route path="/logout" element={<LogoutPage />} />
+        <Route path="/login" element={<Login />} />
       </Routes>
     </BrowserRouter>
   );

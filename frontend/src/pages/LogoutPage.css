@@ -1,0 +1,108 @@
+.logout-page {
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+  background: #f4f7fb;
+}
+
+.logout-card {
+  width: 100%;
+  max-width: 480px;
+  padding: 45px 35px;
+  text-align: center;
+  background: white;
+  border-radius: 20px;
+  box-shadow: 0 10px 35px rgba(0, 0, 0, 0.08);
+}
+
+.logout-icon {
+  width: 70px;
+  height: 70px;
+  margin: 0 auto 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 18px;
+  background: #eef3ff;
+  font-size: 34px;
+}
+
+.logout-card h1 {
+  margin: 0;
+  font-size: 25px;
+  color: #1f2937;
+}
+
+.logout-title {
+  margin: 25px 0 8px;
+  font-size: 20px;
+  font-weight: 600;
+  color: #374151;
+}
+
+.logout-text {
+  margin-bottom: 30px;
+  color: #6b7280;
+}
+
+.logout-actions {
+  display: flex;
+  gap: 15px;
+  justify-content: center;
+}
+
+.logout-actions button {
+  flex: 1;
+  padding: 13px 20px;
+  border: none;
+  border-radius: 10px;
+  font-size: 16px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: 0.2s ease;
+}
+
+.logout-login-btn {
+  background: #2563eb;
+  color: white;
+}
+
+.logout-register-btn {
+  background: #e5e7eb;
+  color: #1f2937;
+}
+
+.logout-actions button:hover {
+  transform: translateY(-2px);
+}
+
+.logout-close-btn {
+  position: fixed;
+  top: 25px;
+  right: 30px;
+
+  width: 45px;
+  height: 45px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  border: none;
+  border-radius: 50%;
+
+  background: white;
+  color: #374151;
+
+  cursor: pointer;
+
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
+
+  transition: 0.2s ease;
+}
+
+.logout-close-btn:hover {
+  transform: scale(1.08);
+}

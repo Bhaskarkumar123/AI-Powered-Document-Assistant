@@ -2641,3 +2641,484 @@
     grid-template-columns: 1fr 1fr;
   }
 }
+
+
+/* ================================
+   LOGIN PAGE
+================================ */
+
+.login-page {
+  min-height: 100vh;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+  box-sizing: border-box;
+  position: relative;
+  transition: background 0.3s ease, color 0.3s ease;
+}
+
+
+/* ================================
+   LIGHT MODE
+================================ */
+
+.login-light-mode {
+  background: #f4f7fb;
+  color: #1f2937;
+}
+
+
+/* ================================
+   DARK MODE
+================================ */
+
+.login-dark-mode {
+  background: #111827;
+  color: #f9fafb;
+}
+
+
+/* ================================
+   LOGIN CARD
+================================ */
+
+.login-card {
+  width: 100%;
+  max-width: 430px;
+  padding: 40px 35px;
+  box-sizing: border-box;
+
+  border-radius: 20px;
+
+  transition:
+    background 0.3s ease,
+    color 0.3s ease,
+    box-shadow 0.3s ease;
+}
+
+
+/* Light Card */
+
+.login-light-mode .login-card {
+  background: #ffffff;
+  box-shadow: 0 10px 35px rgba(0, 0, 0, 0.08);
+}
+
+
+/* Dark Card */
+
+.login-dark-mode .login-card {
+  background: #1f2937;
+  box-shadow: 0 10px 35px rgba(0, 0, 0, 0.35);
+}
+
+
+/* ================================
+   LOGIN ICON
+================================ */
+
+.login-icon {
+  width: 65px;
+  height: 65px;
+
+  margin: 0 auto 20px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  border-radius: 16px;
+
+  transition: 0.3s ease;
+}
+
+
+/* Light */
+
+.login-light-mode .login-icon {
+  background: #eef3ff;
+  color: #2563eb;
+}
+
+
+/* Dark */
+
+.login-dark-mode .login-icon {
+  background: #263b65;
+  color: #60a5fa;
+}
+
+
+/* ================================
+   TITLE
+================================ */
+
+.login-card h1 {
+  margin: 0;
+
+  text-align: center;
+
+  font-size: 28px;
+  font-weight: 700;
+}
+
+
+/* ================================
+   SUBTITLE
+================================ */
+
+.login-subtitle {
+  margin: 10px 0 30px;
+
+  text-align: center;
+
+  font-size: 14px;
+
+  transition: color 0.3s ease;
+}
+
+.login-light-mode .login-subtitle {
+  color: #6b7280;
+}
+
+.login-dark-mode .login-subtitle {
+  color: #9ca3af;
+}
+
+
+/* ================================
+   FORM FIELD
+================================ */
+
+.login-field {
+  margin-bottom: 20px;
+}
+
+.login-field label {
+  display: block;
+
+  margin-bottom: 8px;
+
+  font-size: 14px;
+  font-weight: 600;
+}
+
+
+/* ================================
+   INPUT
+================================ */
+
+.login-field input {
+  width: 100%;
+  box-sizing: border-box;
+
+  padding: 13px 14px;
+
+  border: 1px solid;
+  border-radius: 10px;
+
+  outline: none;
+
+  font-size: 15px;
+
+  transition:
+    background 0.3s ease,
+    border 0.3s ease,
+    color 0.3s ease;
+}
+
+
+/* Light Input */
+
+.login-light-mode .login-field input {
+  background: #ffffff;
+  border-color: #d1d5db;
+  color: #1f2937;
+}
+
+
+/* Dark Input */
+
+.login-dark-mode .login-field input {
+  background: #111827;
+  border-color: #374151;
+  color: #f9fafb;
+}
+
+
+/* Placeholder */
+
+.login-light-mode .login-field input::placeholder {
+  color: #9ca3af;
+}
+
+.login-dark-mode .login-field input::placeholder {
+  color: #6b7280;
+}
+
+
+/* Focus */
+
+.login-field input:focus {
+  border-color: #2563eb;
+}
+
+
+/* ================================
+   ERROR
+================================ */
+
+.login-error {
+  margin: -5px 0 15px;
+
+  color: #ef4444;
+
+  font-size: 14px;
+}
+
+
+/* ================================
+   LOGIN BUTTON
+================================ */
+
+.login-submit-btn {
+  width: 100%;
+
+  padding: 13px;
+
+  margin-top: 5px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+
+  border: none;
+  border-radius: 10px;
+
+  background: #2563eb;
+  color: white;
+
+  font-size: 16px;
+  font-weight: 600;
+
+  cursor: pointer;
+
+  transition: 0.2s ease;
+}
+
+.login-submit-btn:hover {
+  background: #1d4ed8;
+  transform: translateY(-2px);
+}
+
+.login-submit-btn:active {
+  transform: translateY(0);
+}
+
+
+/* ================================
+   REGISTER TEXT
+================================ */
+
+.register-text {
+  margin-top: 25px;
+
+  text-align: center;
+
+  font-size: 14px;
+}
+
+.login-light-mode .register-text {
+  color: #6b7280;
+}
+
+.login-dark-mode .register-text {
+  color: #9ca3af;
+}
+
+
+/* Register Button */
+
+.register-text button {
+  padding: 0;
+
+  border: none;
+
+  background: transparent;
+
+  color: #2563eb;
+
+  font-weight: 600;
+
+  cursor: pointer;
+}
+
+.register-text button:hover {
+  text-decoration: underline;
+}
+
+
+/* ================================
+   CLOSE BUTTON
+================================ */
+
+.login-close-btn {
+  position: fixed;
+
+  top: 25px;
+  right: 30px;
+
+  width: 45px;
+  height: 45px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  border: none;
+  border-radius: 50%;
+
+  cursor: pointer;
+
+  transition:
+    background 0.3s ease,
+    color 0.3s ease,
+    transform 0.2s ease;
+
+  z-index: 10;
+}
+
+
+/* Light */
+
+.login-light-mode .login-close-btn {
+  background: #ffffff;
+  color: #374151;
+
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
+}
+
+
+/* Dark */
+
+.login-dark-mode .login-close-btn {
+  background: #1f2937;
+  color: #f9fafb;
+
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.35);
+}
+
+
+.login-close-btn:hover {
+  transform: scale(1.08);
+}
+
+
+/* ================================
+   THEME TOGGLE
+================================ */
+
+.login-theme-toggle {
+  position: fixed;
+
+  top: 25px;
+  left: 30px;
+
+  display: flex;
+  gap: 5px;
+
+  padding: 5px;
+
+  border-radius: 10px;
+
+  z-index: 10;
+}
+
+
+/* Light Toggle */
+
+.login-light-mode .login-theme-toggle {
+  background: #ffffff;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
+}
+
+
+/* Dark Toggle */
+
+.login-dark-mode .login-theme-toggle {
+  background: #1f2937;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.35);
+}
+
+
+/* Theme Buttons */
+
+.login-theme-toggle button {
+  width: 36px;
+  height: 32px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  border: none;
+  border-radius: 7px;
+
+  background: transparent;
+
+  cursor: pointer;
+
+  transition: 0.2s ease;
+}
+
+
+/* Light Button */
+
+.login-light-mode .login-theme-toggle button {
+  color: #6b7280;
+}
+
+
+/* Dark Button */
+
+.login-dark-mode .login-theme-toggle button {
+  color: #9ca3af;
+}
+
+
+/* Active Theme */
+
+.login-theme-toggle button.active {
+  background: #2563eb;
+  color: #ffffff;
+}
+
+
+/* ================================
+   RESPONSIVE
+================================ */
+
+@media (max-width: 600px) {
+
+  .login-card {
+    padding: 35px 25px;
+  }
+
+  .login-card h1 {
+    font-size: 24px;
+  }
+
+  .login-close-btn {
+    top: 15px;
+    right: 15px;
+  }
+
+  .login-theme-toggle {
+    top: 15px;
+    left: 15px;
+  }
+}
+

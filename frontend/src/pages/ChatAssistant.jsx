@@ -1,4 +1,5 @@
 import { submitFeedback } from "../services/feedbackApi";
+import { API_BASE_URL } from "../services/api";
 import {
   Sun,
   Moon,
@@ -142,7 +143,7 @@ function ChatAssistant() {
       formData.append("file", file);
 
       const response = await fetch(
-        "http://127.0.0.1:8000/documents/upload?department=General&document_type=Document&uploaded_by=User&role=user",
+        `${API_BASE_URL}/documents/upload?department=General&document_type=Document&uploaded_by=User&role=user`,
         {
           method: "POST",
           body: formData,
@@ -203,7 +204,7 @@ function ChatAssistant() {
       ]);
 
       const response = await fetch(
-        "http://127.0.0.1:8000/ask",
+        `${API_BASE_URL}/ask`,
         {
           method: "POST",
 

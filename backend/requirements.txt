@@ -1,0 +1,9 @@
+chromadb
+fastapi
+groq
+python-dotenv
+python-multipart
+PyMuPDF
+rank-bm25
+sentence-transformers
+uvicorn[standard]
